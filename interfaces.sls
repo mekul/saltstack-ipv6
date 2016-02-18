@@ -10,6 +10,14 @@ sync eth0.cfg:
      - group: root
      - mode: 644
 
+sync he-ipv6:
+   file.managed:
+     - name: /etc/network/interfaces.d/he-ipv6.cfg
+     - source: salt://eth0.cfg
+     - user: root
+     - group: root 
+     - mode: 644
+
 sync checkipeth0:
    file.managed:
      - name: /usr/local/bin/checkipeth0
