@@ -1,0 +1,6 @@
+# the following perl code checks for amazon's internal ip address of the machine.
+# this file used as the local ip address in the v4tunnel allows for automatic deployment of new v's without having to write the internal ip everytime
+
+#!/usr/bin/perl
+$check=`ip addr show dev eth0|grep "inet "|awk '{print \$2}'|awk -F/ '{print \$1}'`;
+print $check;
