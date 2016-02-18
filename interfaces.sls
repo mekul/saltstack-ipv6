@@ -1,3 +1,5 @@
+# Because Ubuntu 14.04 stores all of it's network configuration files as "/etc/network/interfaces.d/*cfg" none of the really cool commands commented out below to custom write a /etc/network/interfaces file will work, and instead everything has to be done with file.managed.
+
 sync eth0.cfg:
    file.managed:
      - name: /etc/network/interfaces.d/eth0.cfg
@@ -14,8 +16,7 @@ sync checkipeth0:
      - group: root
      - mode: 755
      
-# Because Ubuntu 14.04 stores all of it's network configuration files as "/etc/network/interfaces.d/*cfg",
-# none of the really cool commands below to custom write an /etc/network/interfaces file will work :(
+
 #system:
 #  network.system:
 #    - enabled: true
