@@ -25,7 +25,15 @@ sync checkipeth0:
      - user: root
      - group: root
      - mode: 755
-     
+
+# I was told this cronjob was needed to keep the tunnel up, technically it's still running on the master, but just in case
+sync cronjob:
+   file.managed:
+     - name: /etc/cron.d/he-ipv6
+     - source: salt://cron_he-ipv6
+     - user: root
+     - group: root
+     - mode: 644
 
 #system:
 #  network.system:
