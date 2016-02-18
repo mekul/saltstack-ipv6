@@ -26,7 +26,7 @@ sync checkipeth0:
      - group: root
      - mode: 755
 
-# I was told this cronjob was needed to keep the tunnel up, technically it's still running on the master, but just in case
+# I read this cronjob was needed to keep the tunnel up, it's still running on the master, but just in case
 sync cronjob:
    file.managed:
      - name: /etc/cron.d/he-ipv6
