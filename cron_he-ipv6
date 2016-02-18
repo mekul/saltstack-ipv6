@@ -1,0 +1,2 @@
+# this cronjob pings the tunnel every 2 minutes with iupv6 packets.
+*/2 * * * *    nobody  ping6 -c 3 -n -q 2001:470:1f04:fd::1 > /dev/null
