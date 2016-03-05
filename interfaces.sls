@@ -13,7 +13,7 @@ sync eth0.cfg:
 sync he-ipv6:
    file.managed:
      - name: /etc/network/interfaces.d/he-ipv6.cfg
-     - source: salt://eth0.cfg
+     - source: salt://he-ipv6.cfg
      - user: root
      - group: root 
      - mode: 644
