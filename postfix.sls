@@ -16,7 +16,7 @@ make sure postfix is running:
 sync main.cf:
  file.managed:
    - name: /etc/postfix/main.cf
-   - source: salt://main.cf
+   - source: salt://postfix/main.cf
    - user: root
    - group: root
    - mode: 644
@@ -26,7 +26,7 @@ sync main.cf:
 sync aliases:
  file.managed:
    - name: /etc/aliases
-   - source: salt://aliases
+   - source: salt://postfix/aliases
    - user: root
    - group: root
    - mode: 644
