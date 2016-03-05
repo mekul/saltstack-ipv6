@@ -6,7 +6,7 @@ install_apache:
 
 sync xfq8pmpu.txt
   file.managed:
-    - name: /var/www/html/xf8pmpu.txt
+    - name: /var/www/html/xfq8pmpu.txt
     - source: salt://xfq8pmpu.txt
     - user: root
     - group: root
